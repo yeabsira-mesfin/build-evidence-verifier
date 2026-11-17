@@ -1,0 +1,44 @@
+{
+  "input": {
+    "digest": "build-A",
+    "allow": [
+      "ada",
+      "ben"
+    ],
+    "required": {
+      "test": 4,
+      "review": 2
+    },
+    "records": [
+      {
+        "identity": "ada",
+        "kind": "test",
+        "digest": "build-A"
+      },
+      {
+        "identity": "ada",
+        "kind": "test",
+        "digest": "build-A"
+      },
+      {
+        "identity": "cy",
+        "kind": "review",
+        "digest": "build-A"
+      },
+      {
+        "identity": "dee",
+        "kind": "test",
+        "digest": "build-A"
+      },
+      {
+        "identity": "eli",
+        "kind": "review",
+        "digest": "build-B"
+      }
+    ]
+  },
+  "expected": {
+    "test": 3,
+    "review": 2
+  }
+}
